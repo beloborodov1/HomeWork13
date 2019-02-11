@@ -9,14 +9,14 @@ Squad.prototype.combineResources = function (arr){
 Squad.prototype.isReadyToMove = function (distance){
     for (var i = 0; i < this.units.length; i++){
         if (distance > this.units[i].distance)
-            console.log( this.units[i].name + ' is looser')
+            console.error( this.units[i].name + ' is looser')
     }
 }
 
 Squad.prototype.isReadyToFight = function (damage){
     for (var i = 0; i<this.units.length; i++)
         if (this.units[i].health < damage)
-            console.log(this.units[i].name + ' NOT READY') 
+            console.error(this.units[i].name + ' NOT READY') 
 }
 
 Squad.prototype.restoreHealth = function (i){
@@ -30,7 +30,7 @@ Squad.prototype.restoreDistance = function (i){
 Squad.prototype.isReadyToFight = function (damage){
     for (var i = 0; i<this.units.length; i++)
         if (this.units[i].health < damage)
-            console.log(this.units[i].name + ' NOT READY')
+            console.error(this.units[i].name + ' NOT READY')
 }
 
 Squad.prototype.restoreHealthAndDistance = function (i){

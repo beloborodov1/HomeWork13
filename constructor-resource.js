@@ -38,14 +38,14 @@ Resource.prototype.add = function (j){
 Resource.prototype.isReadyToMove = function (distance){
     for (var i = 0; i < this.units.length; i++){
         if (distance > this.units[i].distance)
-            console.log( this.units[i].name + ' is looser')
+            console.error( this.units[i].name + ' Tired(')
     }
 }
 
 Resource.prototype.isReadyToFight = function (damage){
     for (var i = 0; i<this.units.length; i++)
         if (this.units[i].health < damage)
-            console.log(this.units[i].name + ' NOT READY') 
+            console.error(this.units[i].name + ' NOT READY') 
 
 }
 
